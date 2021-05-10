@@ -1,0 +1,1485 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Light is Easy</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+@font-face {
+  font-family: fc-minimal-bold-italic;
+  src: url(FC-Minimal/FC_Minimal_Bold_Italic.ttf);
+  font-family: fc-minimal-bold-italic;
+  src: url(FC-Minimal/FC_Minimal_Bold.ttf);
+  font-family: fc-minimal-bold-italic;
+  src: url(FC-Minimal/FC_Minimal_Italic.ttf);
+  font-family: fc-minimal-bold-italic;
+  src: url(FC-Minimal/FC_Minimal_Regular.ttf);
+
+}
+
+*{
+  font-family: 'Mitr', sans-serif;
+}
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.content {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+section:nth-child(odd) {
+  background: rgb(37,37,37);
+}
+
+nav#dot-nav {
+  position: fixed;
+  right: 20px;
+  z-index: 100;
+}
+nav#dot-nav a {
+  border: 1px solid rgba(128, 128, 128, 0.527);
+  border-radius: 50%;
+  padding: 0.5em;
+  display: block;
+  margin: 10px 0;
+  -webkit-transition: all 0.4;
+  transition: all 0.4;
+}
+nav#dot-nav a.active {
+  background: rgba(128, 128, 128, 0.527);
+}
+nav#dot-nav.red a {
+  border: 1px solid #db2853;
+}
+nav#dot-nav.red a.active,
+nav#dot-nav.red a:first-child {
+  background: #db2853;
+}
+
+/* section button */
+
+.content {
+  --def: #000000;
+  --inv: rgb(0, 0, 0);
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+.buttons {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+
+.btn {
+  z-index: 999;
+  position: relative;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  color: var(--inv);
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn a{
+  text-decoration: none;
+  color: rgb(0, 0, 0)
+}
+
+.btn:before,
+.btn:after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.btn:hover a{
+  z-index: 999;
+  color: rgb(255, 255, 255);
+  transition-delay: 0.5s;
+}
+
+.btn:hover:before {
+  transition-delay: 0s;
+}
+
+.btn:hover:after {
+  background: var(--inv);
+  transition-delay: 0.35s;
+}
+/* From center */
+
+.from-center:before {
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  border: 1px solid var(--inv);
+  border-left: 0;
+  border-right: 0;
+}
+
+.from-center:after {
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: var(--inv);
+}
+
+.from-center:hover:before {
+  left: 0;
+  width: 100%;
+}
+
+.from-center:hover:after {
+  top: 0;
+  height: 100%;
+}
+
+/* ~~~~~~~~~~~~ GLOBAL SETTINGS ~~~~~~~~~~~~ */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* section style page */
+#txt_white{
+  color: white;
+}
+#txt_yellow{
+  color: rgb(255, 220, 66);
+}
+#txt_black{
+  color: black;
+}
+.picframe{
+  width: 140%;
+  height: auto!important;
+  position: absolute;
+}
+.picture{
+  max-width: 65%;
+  height: auto!important;
+  position: absolute;
+  border-radius: 1em;
+}
+.picframe2{
+  width: 120%;
+  height: auto!important;
+  position: absolute;
+}
+.picture2{
+  max-width: 70%;
+  height: auto!important;
+  position: absolute;
+  border-radius: 1em;
+}
+.tree{
+  width: 40%;
+  height: auto!important;
+  position: absolute;
+}
+/* page1 */
+#header{
+  position: relative;
+  overflow: hidden;
+}
+.heading_bgcolor{
+  background-color: rgb(46, 0, 174);
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.heading_bg{
+  width: 100%;
+  height: auto!important;
+  margin: auto;
+  position: absolute;
+  padding: 5%;
+  text-align: center;
+  font-weight: bolder;
+}
+.member_bgcolor{
+  background-color: rgb(255, 220, 66);
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.member_bigbg{
+  width: 100%;
+  height: auto!important;
+  top: 10%;
+  margin: auto;
+  position: absolute;
+  padding: auto;
+  font-weight: bolder;
+}
+.member_bg1{
+  background-color: black;
+  max-width: 100%;
+  height: auto!important;
+  margin-top: 2%;
+  margin-left: 30%;
+  margin-right: 30%;
+  position: absolute;
+  border-radius: 2em;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  font-weight: bolder;
+}
+.member_bg2{
+  background-color: black;
+  max-width: 100%;
+  height: auto!important;
+  margin-top: 32%;
+  margin-left: 12%;
+  margin-right: 12%;
+  position: absolute;
+  border-radius: 2em;
+  padding: 5%;
+  text-align: left;
+  font-weight: bolder;
+}
+.light{
+  max-width: 40%;
+  height: auto!important;
+  top: 45%;
+  left: 5%;
+  position: absolute;
+}
+/* page2 */
+#page2{
+  background-color: rgb(213, 242, 255);
+  position: relative;
+  overflow: hidden;
+}
+.honey{
+  width: 50%;
+  height: auto!important;
+  position: absolute;
+}
+.about{
+  background-color: rgb(60, 144, 255);
+  max-width: 100%;
+  height: auto!important;
+  margin-top: 5%;
+  margin-left: 44%;
+  margin-right: 44%;
+  position: absolute;
+  border-radius: 2em;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: center;
+  font-weight: bolder;
+}
+.about_info_bg{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  left: 50%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.about_info{
+  margin-top: 25%;
+  position: absolute;
+  padding: 5%;
+  text-align: left;
+  font-weight: bolder;
+}
+.cloud{
+  width: 11%;
+  height: auto!important;
+  position: absolute;
+  opacity: 0.85;
+}
+.finish_bg{
+  max-width: 50%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.finish{
+  max-width: 75%;
+  height: auto!important;
+  margin-top: 30%;
+  border-radius: 10em;
+}
+.light_close{
+  width: 50%;
+  height: auto!important;
+  margin-top: 45%;
+  margin-left: -60%;
+  position: absolute;
+}
+.light_open{
+  width: 50%;
+  height: auto!important;
+  margin-top: 45%;
+  position: absolute;
+}
+.arrow{
+  width: 20%;
+  height: auto!important;
+  margin-top: 63%;
+  margin-left: -17%;
+  position: absolute;
+}
+.grass{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181833916_816012942364477_5685457758220861733_n.png?_nc_cat=109&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHnESBhakuqlwOSy6GOB2rn1Ji-ZfRgQyfUmL5l9GBDJ7pQJNMHFTimpJHfV7XSwLl0cvPaa8L0xhL2ZbIntGpa&_nc_ohc=VAQ6vfCuwugAX-JYcSA&_nc_ht=scontent.fbkk21-1.fna&oh=5432186a2d86aa1179455abcaef912b3&oe=60BDB2B1);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+/* page7 */
+#page7{
+  background-color: #F75BF0;
+  position: relative;
+  overflow: hidden;
+}
+.info7_bg{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.info7_txt{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.info7_pic{
+  width: 50%;
+  height: 100%;
+  margin-left: 5%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.info8_bg{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  left: 50%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.info8_txt1{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+/* page8 */
+#page8{
+  background-color: #F75BF0;
+  position: relative;
+  overflow: hidden;
+}
+.info9_bg{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.info9_txt{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.info10_bg{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  left: 50%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.info10_txt{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+/* page9 */
+#page9{
+  position: relative;
+  overflow: hidden;
+}
+.info11_bg{
+  background-color: #F75BF0;
+  width: 50%;
+  height: 85%;
+  margin: auto;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.info11_txt{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.benefit_bg{
+  background-color: rgb(212, 42, 0);
+  width: 50%;
+  height: 85%;
+  margin: auto;
+  left: 50%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.benefit{
+  background-color: rgb(255, 220, 66);
+  max-width: 100%;
+  height: auto!important;
+  margin-top: 5%;
+  margin-left: 39%;
+  margin-right: 44%;
+  position: absolute;
+  border-radius: 2em;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: center;
+  font-weight: bolder;
+}
+.benefit_info{
+  margin-top: 25%;
+  position: absolute;
+  padding: 5%;
+  text-align: left;
+  font-weight: bolder;
+}
+.thx{
+  background-color: black;
+  width: 100%;
+  height: 1000px;
+  margin-top: 34.5%;
+  position: absolute;
+  padding: 4%;
+  text-align: center;
+  font-weight: bolder;
+  background-position: bottom;
+}
+/* page3-6 +10*/
+#page3{
+  background-color: rgb(0, 123, 28);
+  position: relative;
+  overflow: hidden;
+}
+.rec1{
+  position: absolute;
+  top:19%;
+  right:20%;
+  width:60%;
+  height:70%;
+  background:#fff;
+}
+.pot{
+  width: 200%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+.context{
+  top:-2%;
+  left: -50%;
+  color: #F7D85B;
+  font-size: 3vw;
+  font-weight: 700;
+  text-align: center;
+}
+.context1{
+  color: #000;
+  font-size: 1.8vw;
+  font-weight: 700;
+  text-align: center;
+}
+.potter{
+  top:13%;
+  left: -70%;
+
+}
+.potter1{
+  top:13%;
+  left: -45%;
+}
+.potter2{
+  top:20%;
+  left: -68%;
+}
+.potter3{
+  top:20%;
+  left: -35%;
+}
+.potter4{
+  top:30%;
+  left: -71%;
+}
+.potter5{
+  top:30%;
+  left: -43%;
+}
+.potter6{
+  top:40%;
+  left: -71.5%;
+}
+.potter7{
+  top:40%;
+  left: -44.5%;
+}
+.potter8{
+  top:50%;
+  left: -70.6%;
+}
+.potter9{
+  top:50%;
+  left: -40%;
+}
+.potter10{
+  top:60%;
+  left: -53.6%;
+}
+.rec3{
+  position: absolute;
+  top:92%;
+  left:20%;
+  width:20%;
+  height:10%;
+  background:#F75BF0;
+}
+.rec4{
+  position: absolute;
+  top:92%;
+  left:60%;
+  width:20%;
+  height:10%;
+  background:#F75BF0;
+}
+.image1 {
+  width: 15%;
+  height: 20%;
+  position: absolute;
+  border-radius: 1em;
+ }
+.i1{
+  top: 10%;
+  left: 4%;
+}
+.i2{
+  top: 10%;
+  right: 4%;
+}
+.i3{
+  top: 40%;
+  left: 4%;
+}
+.i4{
+  top: 40%;
+  right: 4%;
+}
+.i5{
+  top: 70%;
+  left: 4%;
+}
+.i6{
+  top: 70%;
+  right: 4%;
+}
+#page4{
+  background-color: #F75BF0;
+  position: relative;
+  overflow: hidden;
+}
+.trees1{
+  width: 40%;
+  height: auto!important;
+  position: absolute;
+}
+.bg3{
+  background-color:#F75BF0;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.txt3{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.bg11{
+  background-color:#F75BF0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.txt11{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.picman2{
+  width: 50%;
+  height: 100%;
+  margin-left: 5%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.bg4{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  left: 50%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.txt4{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+#page5{
+  background-color:#F75BF0;
+  position: relative;
+  overflow: hidden;
+}
+.trees1{
+  width: 40%;
+  height: auto!important;
+  position: absolute;
+}
+.bg5{
+  background-color:#F75BF0;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.txt5{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.picman3{
+  width: 50%;
+  height: 100%;
+  margin-left: 5%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.bg6{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  left: 50%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.txt6{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+
+
+
+
+
+
+
+#page6{
+  background-color:#F75BF0;
+  position: relative;
+  overflow: hidden;
+}
+.trees{
+  width: 40%;
+  height: auto!important;
+  position: absolute;
+}
+.bg1{
+  background-color:#F75BF0;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.txt{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+.picman{
+  width: 50%;
+  height: 100%;
+  margin-left: 5%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.bg2{
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  left: 50%;
+  position: absolute;
+  padding: auto;
+  text-align: center;
+  font-weight: bolder;
+}
+.txt2{
+  width: 100%;
+  height: auto!important;
+  position: absolute;
+  text-align: center;
+  font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page10{
+  background-color:#000;
+  position: relative;
+  overflow: hidden; 
+}
+.p12{
+  top: 29%;
+  left: 34%;
+}
+.p120{
+  top: 33%;
+  left: 35.9%;
+}
+.photo4 {
+  width: 23%;
+  height: 45%;
+  position: absolute;
+  border-radius: 50%;
+ }
+ .photo5 {
+  width: 27%;
+  height: 53%;
+  position: absolute;
+  border-radius: 50%;
+  background: #9CAB70 ;
+ }
+ .photo6 {
+  width: 27%;
+  height: 53%;
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+ }
+.p13{
+  top: 30%;
+  right: 4%;
+}
+.p14{
+  top: 29%;
+  left: 2%;
+}
+.got{
+  width: 200%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+.text{
+  top:-2%;
+  left: -50%;
+  color: #8939E1 ;
+  font-size: 6vw;
+  font-weight: 700;
+  text-align: center;
+}
+</style>
+ 
+<body>
+  <nav id="dot-nav"></nav>
+  <!-- page1 -->
+  <section id="header" class="content">
+    <div class="heading_bgcolor">
+      <div class="heading_bg">
+        <h1 id="txt_white" style="font-size: 10vw;">Light is</h1>
+        <h1 id="txt_white" style="font-size: 10vw; text-indent: 30%;">  Easy</h1>
+        <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182184410_376348236977419_5741709833655755378_n.png?_nc_cat=101&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeEixdrf91RP9uVhIfq7XNWjB7ZBtUpOuC0HtkG1Sk64Le3siVkbBf6Oyay7p5TY7q3YG96pEQfIkYiCue8BOAWN&_nc_ohc=F_-Rr-M5GZEAX80cEkH&_nc_ht=scontent.fbkk21-1.fna&oh=db2d1f9c522aa42a511c72efac9bf5f7&oe=60B87832"
+            class="light"></img>
+      </div>
+    </div>
+    <div class="member_bgcolor">
+      <div class="member_bigbg">
+        <div class="member_bg1">
+          <h1 id="txt_white" style="font-size: 3vw;">MEMBERS</h1>
+        </div>
+        <div class="member_bg2">
+          <h1 id="txt_white" style="font-size: 1.8vw;">63070103 นางสาวปรีณาภัสร์ พุ่มเจริญ<br><br>
+          63070111 นางสาวพรปวีณ์ โสภณอริยนนท์<br><br>
+          63070170 นายศุภพล โคตรทม</h1>
+        </div>
+      </div>
+    </div>
+     <!-- section buttons -->
+     <div class="buttons">
+      <div class="btn from-center"><a href="#page2">Go!<i data-feather="echevron-right"></i></a></div>
+    </div>
+  </section>
+
+  <!-- page2 -->
+  <section id="page2">
+    <div class="grass"></div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182520370_2212315615567325_8331745385870023655_n.png?_nc_cat=110&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeH0J-Bv71h7G-ubQ2XNtp7WH3RZX6HDn3sfdFlfocOfewerm87-kiHm1uS4KpyTeu307XlXJR-zz3BytoLeGafM&_nc_ohc=73me1SUlqTwAX8I7Frg&_nc_ht=scontent.fbkk21-1.fna&oh=755cbac87e5580f0b4c7fb7286b78882&oe=60B7EB97"
+         class="honey"></img>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182229136_1093767897798110_6212231986216304357_n.png?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHBWIJaSK7QPSXBcgnsMefQhk_KJbQU1xGGT8oltBTXEW_AEiMkv_pptrvWNe_XvXx5Q7a37Wd91TYl3lAV9576&_nc_ohc=bIwR4adyWSIAX8xAz03&_nc_ht=scontent.fbkk21-1.fna&oh=fe60ca0d444e14d069c19f6670308f32&oe=60B7D39F"
+         class="honey" style="left: 50%;"></img>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182244132_277232050791842_83776136973863495_n.png?_nc_cat=109&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeEJuRdBxNxsjK2-WwlxKUTSs0jDqSKCK6azSMOpIoIrpv5VnbkqzTsXB3lQFyAAoZaDUPZTrUEDj21OkQuKMT9G&_nc_ohc=DK8H_e9Z4eAAX_-O7bL&_nc_ht=scontent.fbkk21-1.fna&oh=bff657740ebb5c40635e633c21a36dfe&oe=60B8F097"
+         class="cloud" style="margin-top: 5%; margin-left: 37%;"></img>
+    <div class="about">
+      <h1 id="txt_yellow" style="font-size: 3vw;">ABOUT</h1>
+    </div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182244132_277232050791842_83776136973863495_n.png?_nc_cat=109&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeEJuRdBxNxsjK2-WwlxKUTSs0jDqSKCK6azSMOpIoIrpv5VnbkqzTsXB3lQFyAAoZaDUPZTrUEDj21OkQuKMT9G&_nc_ohc=DK8H_e9Z4eAAX_-O7bL&_nc_ht=scontent.fbkk21-1.fna&oh=bff657740ebb5c40635e633c21a36dfe&oe=60B8F097"
+         class="cloud" style="margin-top: 6%; margin-left: 52%;"></img>
+    <div class="finish_bg">
+      <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182745231_3947609311981486_6382229123499112289_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHHmw33twqJ_Md7DXmo981V1v3aH6KmzjjW_dofoqbOOGrZ5cVvW7KyTwRyKJNKU2G2LkE4dkcKUOVDbVU3Lbkh&_nc_ohc=mLBjzs27WboAX840e7O&tn=XGwnskBf3EJWp_Eb&_nc_ht=scontent.fbkk21-1.fna&oh=f8314e928c8c003ba1540c711b74bd28&oe=60B88ED6"
+           class="finish"></img>
+    </div>
+    <div class="about_info_bg">
+      <div class="about_info">
+        <h1 id="txt_black" style="font-size: 1.8vw; text-indent: 10%;">  Project นี้ ทำเกี่ยวกับการเปิด-ปิดไฟด้วยคำสั่งเสียง ซึ่งจะสั่งการผ่านการตบมือ 2 ครั้ง</h1>
+      </div>
+      <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182050172_294134212266011_8955048109718420250_n.png?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeE96Tv9-VxKM6GY3UF1QV4gFpFv6yacquAWkW_rJpyq4OAYaQefrc_5lQsTtV8hi3kioEINX6Lw6xW9pGs4MReo&_nc_ohc=UGTVXgJlrnYAX-ZeHLa&_nc_ht=scontent.fbkk21-1.fna&oh=c03c9c5b521541bb0f099b6b1c3cee41&oe=60BE9ECF"
+
+           class="light_close"></img>
+      <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181796568_804489830475336_6834804367401530338_n.png?_nc_cat=111&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHlp3ogjx7OgXCsnSoCL9bLbyTzwePJPVhvJPPB48k9WD4h3CXpt1Zc3yL5GwRmlb4bDxNuTppc_tPlFjCfc5oO&_nc_ohc=u-NZDnkXyKcAX-1j_eQ&_nc_ht=scontent.fbkk21-1.fna&oh=ee28169b49731e5f0c533543b1134f52&oe=60B6125E"
+           class="arrow"></img>
+      <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182236024_3986045071487323_2279597287244841586_n.png?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHWe7E_ZIIMwIMN1djKxFdoT2qYFLSe3sFPapgUtJ7ewZmrLKCA2GUgleFevtkTi3MihMKLQ2H0xZCsDeoQB_ja&_nc_ohc=tw5uyaKj6mMAX__aP9_&_nc_ht=scontent.fbkk21-1.fna&oh=9ce0e2f3f0e0cd8829ae8359cc4b33a0&oe=60B8D6D2"
+           class="light_open"></img>
+    </div>
+  </section>
+
+  <!-- page3 -->
+  <section id="page3"><div class="rec1"></div>
+    <div class="pot context"><p>EQUIPMENT USED</p></div>
+    <div class="pot potter context1"><p>1. DCC Uno</p></div><br>
+    <div class="pot potter1 context1"><p>2. Code</p></div>
+    <div class="pot potter2 context1"><p>3. Sound sensor</p></div>
+    <div class="pot potter3 context1"><p>4. สายไฟmale to female 20 cm</p></div>
+    <div class="pot potter4 context1"><p>5. หลอดไฟ</p></div>
+    <div class="pot potter5 context1"><p>6. ขั้วหลอดไฟ</p></div>
+    <div class="pot potter6 context1"><p>7. ปลั๊กไฟ</p></div>
+    <div class="pot potter7 context1"><p>8. สายไฟ</p></div>
+    <div class="pot potter8 context1"><p>9. สายUSB</p></div>
+    <div class="pot potter9 context1"><p>10. Adapter 9V 1A</p></div>
+    <div class="pot potter10 context1"><p>11. Channel Relay(10A) with optocoupler Module</p></div>
+    <div class="rec3"></div>
+    <div class="rec4"></div>
+    <img src="https://ae01.alicdn.com/kf/H34adc69ebc7f40cfa5985674ac7d1f29R/UNO-R3-Development-BOARD-line-Expert-DCC.jpg" class="image1 i1"></img>
+    <img src="https://cf.shopee.co.th/file/1a3be0a28d86e985c702ebc088bad324" class="image1 i2"></img>
+    <img src="http://www.icstation.com/images/big/products/13534_2_3719.JPG" class="image1 i3"></img>
+    <img src="https://cf.shopee.co.th/file/852f3eca24c38fc9277e95f4b850f344" class="image1 i4"></img>
+    <img src="https://c.lnwfile.com/ixahlp.jpg" class="image1 i5"></img>
+    <img src="https://dy.lnwfile.com/tw1ei3.jpg" class="image1 i6"></img>
+  </section>
+
+  <!-- page4 -->
+  <section id="page4">
+    <h1 id="txt_black" style="margin-top: 1%; margin-left: 40%; font-size: 3vw;">How To Do?</h1>
+    <div class="bg3">
+      <div class="txt3">
+        <h1 id="txt_black" style="margin-top: 0%; font-size: 1.8vw;">1. ต่อปลั๊กตัวผู้</h1>
+        <div class="picman2">
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026" class="picframe" style="margin-left: -35%;"></img>
+          <img src="https://scontent.fbkk8-3.fna.fbcdn.net/v/t1.15752-9/182312448_569651287332009_1455937925838441966_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFGLELOXBKqv3S-WMTISQGJqBBRPBK535OoEFE8Ernfk2tQVFGSkXQM-JITqbEHaDQzymt_CPGdTu1ux1fs0oQ7&_nc_ohc=Fl8VRqSFCpUAX9vKnq-&_nc_ht=scontent.fbkk8-3.fna&oh=e4a484aae1d147e0d17ad220b4850c7c&oe=60B9D502" class="picture" style="margin-top: 42%; margin-left: 2%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182119286_577482479816010_5593486213634320752_n.png?_nc_cat=101&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeGfPUSlRHcirzQtqpxB9mzqd81twDocv7t3zW3AOhy_u5Y56uTOUY_qxc4Hu4HoKHoqO5K5RNCJDXB9u7u-MSwf&_nc_ohc=Ek9JSwaVj-AAX-_BVcG&_nc_ht=scontent.fbkk12-1.fna&oh=8f77db956c568bcc6921246e002d76fc&oe=60B5BD45" class="trees1" style="left: 5%; margin-top: 15%;"></img>
+    <div class="bg4">
+      <div class="txt4">
+        <h1 id="txt_black" style="margin-top: 0%; font-size: 1.8vw;">2. ตัดสายไฟของปลั๊กตัวผู้</h1>
+        <div class="bg3">
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026"
+               class="picframe" style="margin-top: -1%; margin-left: -105%;"></img>
+          <img src="https://scontent.fbkk12-2.fna.fbcdn.net/v/t1.15752-9/181445299_465537934679859_4764264229685802453_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeGjqYyWkM-WkqPalL81PrnL2FCUiYWYACzYUJSJhZgALH-avd1rnO_mxBb7pSxRi_D0eOS4aG6yPBUGNDwd9w2F&_nc_ohc=Ws5lEf4ARSoAX9rpxFl&_nc_ht=scontent.fbkk12-2.fna&oh=1a060205db211d91b4eb991ce5384651&oe=60B67E74"
+               class="picture" style="margin-top: 41%; margin-left: -68%;"></img>
+        </div>
+        <div class="picman2">
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026"
+               class="picframe" style="margin-top: 1%; margin-left: 10%;"></img>
+          <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.15752-9/182418302_243100960932250_9095345194042806440_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFM9iiZYqprZME1t1zQ2DCuq6wMBrMlztGrrAwGsyXO0aekQ7vwb4Of-hugCzXKoHEvLGHr_LZWxpLVDPcQMUER&_nc_ohc=qyJnSFNOp7YAX94qJkz&_nc_ht=scontent.fbkk13-2.fna&oh=36a06ed019b81913f39182f313f124b9&oe=60B6B413"
+               class="picture" style="margin-top: 43%; margin-left: 47%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181893706_481425176514382_5769935267803407288_n.png?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFUYa5BiFRDC7cy3mijKEug43ymtfWMMebjfKa19Ywx5qyXb5iC9lIPiuBXfq3-Y82qYmBwGICyQLUXa6RyUnXX&_nc_ohc=y6kNzLwvZS8AX9QhRXb&_nc_ht=scontent.fbkk21-1.fna&oh=2e4ac5ccde0cf551e7e7332701efa4cf&oe=60B5D98F"
+         class="trees1" style="right: 5%; margin-top: 15%;"></img>
+  </section>
+
+  <!-- page5 -->
+  <section id="page5">
+    <div class="bg5">
+      <div class="txt5">
+        <h1 id="txt_black" style="font-size: 1.8vw;">3. ต่อขั้วปลั๊กเข้ากับฐานของหลอดไฟ</h1>
+        <div class="picman3">
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026" class="picframe" style="margin-top: -29%; margin-left: -35%;"></img>
+          <img src="https://scontent.fbkk9-2.fna.fbcdn.net/v/t1.15752-9/182105467_755787475128675_5039551281059043358_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeEs95zGrznSvRJVVyw2dbG_wWWMNVFTMM7BZYw1UVMwzpJwQQUPZCjj9njhrH5TJlIQ28ZeAtN4M6aGJREhMPLS&_nc_ohc=7JW4yDniGHAAX8pw7Gj&_nc_ht=scontent.fbkk9-2.fna&oh=949c8266b93e646a8a87831c2aff5ec2&oe=60B6C7BC" class="picture" style="margin-top: 13%; margin-left: 2%;"></img>
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026" class="picframe" style=" margin-top: 50%; margin-left: -35%;"></img>
+          <img src="https://scontent.fbkk9-2.fna.fbcdn.net/v/t1.15752-9/181833792_500270891166823_3889512593434534782_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFjJVP2ibBOeniD2XXNQ-rB8tuQbVDQZU3y25BtUNBlTTXWsXyMdt2XIQTuuOkLKdQDv3Zpz0yQQL_XptjF5AUj&_nc_ohc=zB7E-V5ByVQAX-dPmHV&_nc_ht=scontent.fbkk9-2.fna&oh=eb36dfd2527e42c025dcffb0fafbf1c2&oe=60B7EF18" class="picture" style="margin-top: 92%; margin-left: 2%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182119286_577482479816010_5593486213634320752_n.png?_nc_cat=101&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeGfPUSlRHcirzQtqpxB9mzqd81twDocv7t3zW3AOhy_u5Y56uTOUY_qxc4Hu4HoKHoqO5K5RNCJDXB9u7u-MSwf&_nc_ohc=Ek9JSwaVj-AAX-_BVcG&_nc_ht=scontent.fbkk12-1.fna&oh=8f77db956c568bcc6921246e002d76fc&oe=60B5BD45" class="trees1" style="left: 5%; margin-top: 27.5%;"></img>
+    <div class="bg6">
+      <div class="txt6">
+        <h1 id="txt_black" style="font-size: 1.8vw;">4. ต่อสายไฟที่ตัดไว้เข้ากับ Relay<br>และแปะกาวสองหน้าไว้ที่ฐานของ Relay</h1>
+        <div class="bg5">
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026"
+               class="picframe" style="margin-top: -30%; margin-left: -105%;"></img>
+          <img src="https://scontent.fbkk12-2.fna.fbcdn.net/v/t1.15752-9/182946941_474367623619160_8476078824310021467_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFCA-MIqldwyHj9wDwyF4_1tfW7QAj-sYm19btACP6xieanbk5CUOoUOstSjZg1pNUufHF21gWzO0sBVRRBDfZ8&_nc_ohc=kU_85c_bad8AX9VeO-9&_nc_ht=scontent.fbkk12-2.fna&oh=d2d00c624154ef1c24aa9e3eed540702&oe=60B75F5F"
+               class="picture" style="margin-top: 12%; margin-left: -68%;"></img>
+        </div>
+        <div class="picman3">
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026"
+               class="picframe" style="margin-top: -30%; margin-left: 10%;"></img>
+          <img src="https://scontent.fbkk13-1.fna.fbcdn.net/v/t1.15752-9/181178469_292978249212985_8227820521723317646_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFLzr6HPv_izX69mFgFmiXY4wYwCUdpdUPjBjAJR2l1Q3XWJtiQ2_pBYmMC5xw8S_Mjk3sz4fNZdtrHkcCc84qW&_nc_ohc=Fj-IGU6X02QAX9jKFQt&_nc_ht=scontent.fbkk13-1.fna&oh=30ee59a1d177cea476822d03f49471ee&oe=60B89918"
+               class="picture" style="margin-top: 13%; margin-left: 47%;"></img>
+               <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026"
+               class="picframe" style="margin-top: 43%; margin-left: -45%;"></img>
+          <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.15752-9/176865131_765305094353437_7045306800276575284_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHSQDjHm9pcPb9VAJ2eZm_4UGeOq1DDzKdQZ46rUMPMp-dQxiBly35CJdchP8UiIml4wFdlypf0kdmw2AqonC5S&_nc_ohc=GZ4KaaKnkj8AX-eU9bS&_nc_ht=scontent.fbkk13-2.fna&oh=8dbe61ea5a96bcc6b3cf246fd32a8bfc&oe=60B67C1D"
+               class="picture" style="margin-top: 87%; margin-left: -7%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181893706_481425176514382_5769935267803407288_n.png?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFUYa5BiFRDC7cy3mijKEug43ymtfWMMebjfKa19Ywx5qyXb5iC9lIPiuBXfq3-Y82qYmBwGICyQLUXa6RyUnXX&_nc_ohc=y6kNzLwvZS8AX9QhRXb&_nc_ht=scontent.fbkk21-1.fna&oh=2e4ac5ccde0cf551e7e7332701efa4cf&oe=60B5D98F"
+         class="trees1" style="right: 5%; margin-top: 27.5%;"></img>
+  </section>
+
+  <!-- page6 -->
+  <section id="page6">
+    <div class="bg1">
+      <div class="txt">
+        <h1 id="txt_black" style="font-size: 1.8vw; margin-top: 15%;">5. ต่อสายไฟเข้าเซนเซอร์เสียง</h1>
+        <div class="picman">
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026" class="picframe" style="margin-left: -35%;"></img>
+          <img src="https://scontent.fbkk8-3.fna.fbcdn.net/v/t1.15752-9/182312448_569651287332009_1455937925838441966_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFGLELOXBKqv3S-WMTISQGJqBBRPBK535OoEFE8Ernfk2tQVFGSkXQM-JITqbEHaDQzymt_CPGdTu1ux1fs0oQ7&_nc_ohc=Fl8VRqSFCpUAX9vKnq-&_nc_ht=scontent.fbkk8-3.fna&oh=e4a484aae1d147e0d17ad220b4850c7c&oe=60B9D502" class="picture" style="margin-top: 42%; margin-left: 2%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182119286_577482479816010_5593486213634320752_n.png?_nc_cat=101&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeGfPUSlRHcirzQtqpxB9mzqd81twDocv7t3zW3AOhy_u5Y56uTOUY_qxc4Hu4HoKHoqO5K5RNCJDXB9u7u-MSwf&_nc_ohc=Ek9JSwaVj-AAX-_BVcG&_nc_ht=scontent.fbkk12-1.fna&oh=8f77db956c568bcc6921246e002d76fc&oe=60B5BD45" class="trees" style="left: 5%; margin-top: 21.5%;"></img>
+    <div class="bg2">
+      <div class="txt2">
+        <h1 id="txt_black" style="font-size: 1.8vw; margin-top: 15%;">6. นำสายไฟที่ต่อกับเซนเซอร์เสียงต่อเข้า Arduino</h1>
+        <h1 id="txt_black" style="font-size: 1.8vw; text-align: left">- D0 ต่อ IO7</h1>
+        <div class="bg1">
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026"
+              class="picframe" style="margin-top: -15%; margin-left: -105%;"></img>
+          <img src="https://scontent.fbkk12-2.fna.fbcdn.net/v/t1.15752-9/181445299_465537934679859_4764264229685802453_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeGjqYyWkM-WkqPalL81PrnL2FCUiYWYACzYUJSJhZgALH-avd1rnO_mxBb7pSxRi_D0eOS4aG6yPBUGNDwd9w2F&_nc_ohc=Ws5lEf4ARSoAX9rpxFl&_nc_ht=scontent.fbkk12-2.fna&oh=1a060205db211d91b4eb991ce5384651&oe=60B67E74"
+              class="picture" style="margin-top: 27%; margin-left: -68%;"></img>
+        </div>
+        <h1 id="txt_black" style="font-size: 1.8vw; margin-top: -7%; margin-left: 40%;">- + ต่อ 5V</h1>
+        <h1 id="txt_black" style="font-size: 1.8vw; margin-top: -1%; margin-left: 40%;">- G ต่อ GND</h1>
+        <div class="picman">
+          <img src="https://scontent.fbkk12-1.fna.fbcdn.net/v/t1.15752-9/182072524_773732736648228_7580357474937247840_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHEi4fHz2YHeCaD-HbQ__OCMCGFJ6HA70AwIYUnocDvQBCMO0bE0Ul0wEHLutI9OnfI5p7aavQ4uA-YbUnGbIaT&_nc_ohc=6YZW96jASyMAX-MevyO&_nc_ht=scontent.fbkk12-1.fna&oh=14e74b450017993d246735012a938ccb&oe=60B56026"
+              class="picframe" style="margin-top: -27%; margin-left: 10%;"></img>
+          <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.15752-9/182418302_243100960932250_9095345194042806440_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFM9iiZYqprZME1t1zQ2DCuq6wMBrMlztGrrAwGsyXO0aekQ7vwb4Of-hugCzXKoHEvLGHr_LZWxpLVDPcQMUER&_nc_ohc=qyJnSFNOp7YAX94qJkz&_nc_ht=scontent.fbkk13-2.fna&oh=36a06ed019b81913f39182f313f124b9&oe=60B6B413"
+              class="picture" style="margin-top: 15%; margin-left: 47%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181893706_481425176514382_5769935267803407288_n.png?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFUYa5BiFRDC7cy3mijKEug43ymtfWMMebjfKa19Ywx5qyXb5iC9lIPiuBXfq3-Y82qYmBwGICyQLUXa6RyUnXX&_nc_ohc=y6kNzLwvZS8AX9QhRXb&_nc_ht=scontent.fbkk21-1.fna&oh=2e4ac5ccde0cf551e7e7332701efa4cf&oe=60B5D98F"
+        class="tree" style="right: 5%; margin-top: 21.5%;"></img>
+  </section>
+
+  <!-- page7 -->
+  <section id="page7">
+    <div class="info7_bg">
+      <div class="info7_txt">
+        <h1 id="txt_black" style="font-size: 1.8vw;">7. ต่อสายไฟเข้ากับรีเลย์</h1>
+        <div class="info7_pic">
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182619027_849447782312118_6530646356181536222_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHPKyhi8gYsei2s_oI5gJm9VuHwGNA7hQlW4fAY0DuFCV9-3hnCm7fP8KGB_8_EZaMQAAes1ofFBnJKfKOuO6oI&_nc_ohc=MNcx1FPDnp8AX93CPtN&_nc_ht=scontent.fbkk21-1.fna&oh=dd1de76f057ac6e9add06aeb2820818d&oe=60B8E7E0"
+               class="picframe" style="margin-left: -35%;"></img>
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181783982_244014127518429_3366054250422370042_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeGzBDboewEcUOMIG3n3kXT-YDgA_EQe0ONgOAD8RB7Q452wZ_mdk2WPlmtpSHNXueMAayJgU3phoRwCgM3esmFN&_nc_ohc=y4JcfZ89OEkAX-kgUgw&_nc_oc=AQng2DCPQKuWt9uM4OFdeSm2zznmDc3fqaKa8afeMvV1D5hd2BrIn5K3l1IUhjoPsTo&_nc_ht=scontent.fbkk21-1.fna&oh=a7bdf226d5022a0fb7aa313d3b9a8eb7&oe=60B78D09"
+               class="picture" style="margin-top: 42%; margin-left: 2%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181893706_481425176514382_5769935267803407288_n.png?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFUYa5BiFRDC7cy3mijKEug43ymtfWMMebjfKa19Ywx5qyXb5iC9lIPiuBXfq3-Y82qYmBwGICyQLUXa6RyUnXX&_nc_ohc=y6kNzLwvZS8AX9QhRXb&_nc_ht=scontent.fbkk21-1.fna&oh=2e4ac5ccde0cf551e7e7332701efa4cf&oe=60B5D98F"
+         class="tree" style="left: 5%; margin-top: 27.5%;"></img>
+    <div class="info8_bg">
+      <div class="info8_txt1">
+        <h1 id="txt_black" style="font-size: 1.8vw;">8. นำสายไฟที่ต่อเข้ากับรีเลย์ต่อเข้า Arduino</h1>
+        <h1 id="txt_black" style="font-size: 1.8vw; text-align: left">- IN1 ต่อ IO8</h1>
+        <div class="info7_pic">
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182619027_849447782312118_6530646356181536222_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHPKyhi8gYsei2s_oI5gJm9VuHwGNA7hQlW4fAY0DuFCV9-3hnCm7fP8KGB_8_EZaMQAAes1ofFBnJKfKOuO6oI&_nc_ohc=MNcx1FPDnp8AX93CPtN&_nc_ht=scontent.fbkk21-1.fna&oh=dd1de76f057ac6e9add06aeb2820818d&oe=60B8E7E0"
+               class="picframe" style="margin-top: -35%; margin-left: -105%;"></img>
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181926586_2933223567003850_8386174720642612110_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeGb6gBq7GnGWndz9Fud3zoKt5nRkofNI023mdGSh80jTXxrtDAWmDj290LkwBj1FopP-mTkBt2h_gn7mjMFElzt&_nc_ohc=2RtV2m0Z2XoAX-_84Sa&_nc_ht=scontent.fbkk21-1.fna&oh=56bedf48c10db636c2df827220f0ac79&oe=60B8CEEA"
+               class="picture" style="margin-top: 7%; margin-left: -68%;"></img>
+        </div>
+        <h1 id="txt_black" style="font-size: 1.8vw; margin-top: -7%; margin-left: 40%;">- GND ต่อ GND</h1>
+        <div class="info7_pic">
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182619027_849447782312118_6530646356181536222_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHPKyhi8gYsei2s_oI5gJm9VuHwGNA7hQlW4fAY0DuFCV9-3hnCm7fP8KGB_8_EZaMQAAes1ofFBnJKfKOuO6oI&_nc_ohc=MNcx1FPDnp8AX93CPtN&_nc_ht=scontent.fbkk21-1.fna&oh=dd1de76f057ac6e9add06aeb2820818d&oe=60B8E7E0"
+               class="picframe" style="margin-top: -35%; margin-left: 10%;"></img>
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182663203_2544164475879452_5447320661143883054_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFY40PIt4xXd13bLLf8T1NnSEZepN_r555IRl6k3-vnnnYoPQDKw3lu-GsyF6aRX1FJ2ronvSP215NTl6TJf4kM&_nc_ohc=dkWsU1hVNOMAX9Rrf9F&_nc_ht=scontent.fbkk21-1.fna&oh=b525f112bafc86f77caa4179c626126d&oe=60B7E6EE"
+               class="picture" style="margin-top: 7%; margin-left: 47%;"></img>
+        </div>
+        <h1 id="txt_black" style="font-size: 1.8vw; margin-top: 37%; margin-right: 20%;">- VCC ต่อ 3.3V</h1>
+        <div class="info7_pic">
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182619027_849447782312118_6530646356181536222_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHPKyhi8gYsei2s_oI5gJm9VuHwGNA7hQlW4fAY0DuFCV9-3hnCm7fP8KGB_8_EZaMQAAes1ofFBnJKfKOuO6oI&_nc_ohc=MNcx1FPDnp8AX93CPtN&_nc_ht=scontent.fbkk21-1.fna&oh=dd1de76f057ac6e9add06aeb2820818d&oe=60B8E7E0"
+               class="picframe" style="margin-top: -35%; margin-left: -105%;"></img>
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181970096_2878848415697359_6325847403700657228_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFffN_XhsDLHITuQ6LrgVqeAuZQsYpU5oMC5lCxilTmg3emTU7AJG0dMxDlG4tNZHbC-b9trn3SLqgnvmmV0xnc&_nc_ohc=RclC22oSUtwAX_Tx6Xc&_nc_oc=AQmkFJEZ2y7PNwteq7OTb-lgO7B_rXYrS4x4JCwC1UBBT0r0XDc2-r6Q1hGZdh8qyWw&_nc_ht=scontent.fbkk21-1.fna&oh=565b04aec00e9f39a0e37bc7d10d96a7&oe=60BE2C98"
+               class="picture" style="margin-top: 7%; margin-left: -68%;"></img>
+        </div>
+        <div class="info7_pic">
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182619027_849447782312118_6530646356181536222_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHPKyhi8gYsei2s_oI5gJm9VuHwGNA7hQlW4fAY0DuFCV9-3hnCm7fP8KGB_8_EZaMQAAes1ofFBnJKfKOuO6oI&_nc_ohc=MNcx1FPDnp8AX93CPtN&_nc_ht=scontent.fbkk21-1.fna&oh=dd1de76f057ac6e9add06aeb2820818d&oe=60B8E7E0"
+               class="picframe" style="margin-top: -35%; margin-left: 10%;"></img>
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181884289_553287435637543_7857605310080858078_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeEIbbhqOfm4uqAsiySQ5MdH4io4_6bHfUniKjj_psd9SToDOFNnAMHM0jqQFpgwN0jvXqFRFJTNaO8z-cxoal7T&_nc_ohc=yCndl-RhPYMAX8bzjH_&_nc_ht=scontent.fbkk21-1.fna&oh=f7b04dd28279e785bdc818cfecf9548b&oe=60C008A1"
+               class="picture" style="margin-top: 7%; margin-left: 47%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181893706_481425176514382_5769935267803407288_n.png?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFUYa5BiFRDC7cy3mijKEug43ymtfWMMebjfKa19Ywx5qyXb5iC9lIPiuBXfq3-Y82qYmBwGICyQLUXa6RyUnXX&_nc_ohc=y6kNzLwvZS8AX9QhRXb&_nc_ht=scontent.fbkk21-1.fna&oh=2e4ac5ccde0cf551e7e7332701efa4cf&oe=60B5D98F"
+         class="tree" style="right: 5%; margin-top: 27.5%;"></img>
+  </section>
+
+  <!-- page8 -->
+  <section id="page8">
+    <div class="info9_bg">
+      <div class="info9_txt">
+        <h1 id="txt_black" style="font-size: 1.8vw; margin: 15%;">9. ถ้าเซนเซอร์เสียงทำงาน ไฟจะติดพร้อมกันสองดวง</h1>
+        <div class="info7_pic">
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182619027_849447782312118_6530646356181536222_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHPKyhi8gYsei2s_oI5gJm9VuHwGNA7hQlW4fAY0DuFCV9-3hnCm7fP8KGB_8_EZaMQAAes1ofFBnJKfKOuO6oI&_nc_ohc=MNcx1FPDnp8AX93CPtN&_nc_ht=scontent.fbkk21-1.fna&oh=dd1de76f057ac6e9add06aeb2820818d&oe=60B8E7E0"
+               class="picframe" style="margin-top: -50%; margin-left: -35%;"></img>
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182495308_145619917528478_2753148785626984071_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHdQqoo3On3Wx7o4lvsgDqOdF2ALzkV6EZ0XYAvORXoRqiymAOIAVOqDR5TbD8LN4xfDsF8WsaHFaLjqA7srgy-&_nc_ohc=Z54rIRZ-mmMAX8B1s2K&_nc_ht=scontent.fbkk21-1.fna&oh=5788fc040b960bc85fdc8a59274aec42&oe=60BE8C2E"
+               class="picture" style="margin-top: -8%; margin-left: 2%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181893706_481425176514382_5769935267803407288_n.png?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFUYa5BiFRDC7cy3mijKEug43ymtfWMMebjfKa19Ywx5qyXb5iC9lIPiuBXfq3-Y82qYmBwGICyQLUXa6RyUnXX&_nc_ohc=y6kNzLwvZS8AX9QhRXb&_nc_ht=scontent.fbkk21-1.fna&oh=2e4ac5ccde0cf551e7e7332701efa4cf&oe=60B5D98F"
+         class="tree" style="left: 5%; margin-top: 20%;"></img>
+    <div class="info10_bg">
+      <div class="info10_txt">
+        <h1 id="txt_black" style="font-size: 1.8vw; margin: 15%;">10. หมุนปรับระดับเสียงของเซนเซอร์เสียง</h1>
+        <div class="info7_pic">
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182619027_849447782312118_6530646356181536222_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHPKyhi8gYsei2s_oI5gJm9VuHwGNA7hQlW4fAY0DuFCV9-3hnCm7fP8KGB_8_EZaMQAAes1ofFBnJKfKOuO6oI&_nc_ohc=MNcx1FPDnp8AX93CPtN&_nc_ht=scontent.fbkk21-1.fna&oh=dd1de76f057ac6e9add06aeb2820818d&oe=60B8E7E0"
+               class="picframe" style="margin-top: -45%; margin-left: -35%;"></img>
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182765163_486178836163496_4360277640150994400_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHJX0gV3kNF6aL8GyfayQAtrX37ePtskFutfft4-2yQW77m4u-lVgKEFySSAl_Hnu07DCIZP2nN7E7rJauOCe2-&_nc_ohc=jqD_4GMt1LUAX960v5x&tn=zZZSwVMvmH3akcE0&_nc_ht=scontent.fbkk21-1.fna&oh=9ba19fb14530f59695560c56846a3f3f&oe=60BF1CF8"
+               class="picture" style="margin-top: -3%; margin-left: 2%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181893706_481425176514382_5769935267803407288_n.png?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFUYa5BiFRDC7cy3mijKEug43ymtfWMMebjfKa19Ywx5qyXb5iC9lIPiuBXfq3-Y82qYmBwGICyQLUXa6RyUnXX&_nc_ohc=y6kNzLwvZS8AX9QhRXb&_nc_ht=scontent.fbkk21-1.fna&oh=2e4ac5ccde0cf551e7e7332701efa4cf&oe=60B5D98F"
+         class="tree" style="left: 55%; margin-top: 20%;"></img>
+  </section>
+
+  <!-- page9 -->
+  <section id="page9">
+    <div class="info11_bg">
+      <div class="info11_txt">
+        <h1 id="txt_black" style="font-size: 1.8vw;">11. เขียนโค้ดการทำงานของเซนเซอร์เสียง</h1>
+        <div class="info7_pic">
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182332577_494440665039481_1404541449854540677_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFvWCMI_zXukNzQynGhtkZYPZ4Kfga5CJ49ngp-BrkInkVpAKsoo9cBua6zh_a6GOzZhNevJavWutRBXQzae__N&_nc_ohc=ZwW7iCNaQ3YAX8YGbLn&_nc_ht=scontent.fbkk21-1.fna&oh=18c2982a532f9dd14905125176ba771d&oe=60B7F831"
+               class="picframe2" style="margin-top: -5%; margin-left: -70%;"></img>
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182720128_291113166078646_982483371786964310_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFxmCy55BqR8j2Zw73Ipvc3yKfa7zY3EATIp9rvNjcQBItD2OOj_CqE-eWOdlGkWB8UFJL33MEtil9aJX8_FiJ6&_nc_ohc=Xc7GP20gBnoAX_-J1gZ&_nc_ht=scontent.fbkk21-1.fna&oh=6f470b96850ad542e5d761c5f9ff8d29&oe=60B8C4FD"
+               class="picture2" style="margin-top: 20%; margin-left: -45%;"></img>
+        </div>
+        <div class="info7_pic">
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182332577_494440665039481_1404541449854540677_n.png?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFvWCMI_zXukNzQynGhtkZYPZ4Kfga5CJ49ngp-BrkInkVpAKsoo9cBua6zh_a6GOzZhNevJavWutRBXQzae__N&_nc_ohc=ZwW7iCNaQ3YAX8YGbLn&_nc_ht=scontent.fbkk21-1.fna&oh=18c2982a532f9dd14905125176ba771d&oe=60B7F831"
+               class="picframe2" style="margin-top: -5%; margin-left: 25%;"></img>
+          <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/182423665_1134793847023051_782761500643325100_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeHTzTooklWPJF9GJ3-sf68riwLTdxAFKuiLAtN3EAUq6CRqcSxRc7heJGHEFXvq1VofSUUkAhpnuA6K2TafXYe7&_nc_ohc=sLC2_l1oNs4AX84tarp&_nc_ht=scontent.fbkk21-1.fna&oh=adad9b55afdd4472dad14c1267485bc1&oe=60B6F543"
+               class="picture2" style="margin-top: 22%; margin-left: 50%;"></img>
+        </div>
+      </div>
+    </div>
+    <img src="https://scontent.fbkk21-1.fna.fbcdn.net/v/t1.15752-9/181893706_481425176514382_5769935267803407288_n.png?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeFUYa5BiFRDC7cy3mijKEug43ymtfWMMebjfKa19Ywx5qyXb5iC9lIPiuBXfq3-Y82qYmBwGICyQLUXa6RyUnXX&_nc_ohc=y6kNzLwvZS8AX9QhRXb&_nc_ht=scontent.fbkk21-1.fna&oh=2e4ac5ccde0cf551e7e7332701efa4cf&oe=60B5D98F"
+         class="tree" style="left: 5%; margin-top: 13%;"></img>
+    <div class="benefit_bg">
+      <div class="benefit">
+        <h1 id="txt_black" style="font-size: 3vw;">BENEFITS</h1>
+      </div>
+      <div class="benefit_info">
+        <h1 id="txt_black" style="font-size: 1.8vw;">1. มีความสะดวกในการควบคุม<br><br>
+        2. มีความปลอดภัยมากขึ้น เนื่องจากไม่ต้องใช้มือในการสัมผัส<br><br>
+        3. ช่วยประหยัดเวลาในเวลาที่เร่งรีบได้</h1>
+      </div>
+    </div>
+    <div class="thx">
+      <h1 id="txt_white" style="font-size: 3vw;">Thank You.</h1>
+    </div>
+  </section>
+
+  <!-- page10 -->
+  <section id="page10" class="content">
+    <div class="got text"><p>MEMBERS</p></div>
+    <div class="photo5 p12"></div>
+    <div class="photo6 p13"></div>
+    <div class="photo6 p14"></div>
+    <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.15752-9/181431140_801199417460628_8364786959014703072_n.png?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeGs-aY1F7zD5IUUxk8fCk57gkbdvlApEfmCRt2-UCkR-bw3TDx-SF3WK7z65VxWNBVY8zsavT3rU-HLRw2Quzk_&_nc_ohc=3w6as4C07XgAX9xKAtI&_nc_ht=scontent.fbkk13-2.fna&oh=ee1ba22ea76c469a36b6b560a1807262&oe=60B7D71F" class="photo4 p120"></img>
+    <img src="https://scontent.fbkk12-4.fna.fbcdn.net/v/t1.15752-9/179972974_1139236873245094_2736516658107989506_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeG0T7EFQ2a-q3wD2h8wxBje_NCf7sNFagH80J_uw0VqAds0n7TViTs6mynDyvwuN51y9X-MninZClALJEhjgK58&_nc_ohc=-cs4Uwdayr8AX_fxrpk&_nc_ht=scontent.fbkk12-4.fna&oh=8c41defe47006ed69afd4f2df64b7f26&oe=60B672B3" class="photo4 p13"></img>
+    <img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.15752-9/180252527_334471488112871_6036171605087579369_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeEDLp62SrNYrgHCaNY6qzvbPdvl2hnsQSQ92-XaGexBJF-jVl7LKggeJVyJpDoLUm17IrPgzrWn77xT_9WhiG1v&_nc_ohc=LccyEBm7vckAX8Mhs7I&_nc_ht=scontent.fbkk13-2.fna&oh=f2daad477e7dd999bb8146db63afa8c7&oe=60B65928" class="photo4 p14"></img>
+    <!-- section buttons -->
+    <div class="buttons" style="background: white;">
+      <div class="btn from-center"><a href="#header">To top<i data-feather="echevron-right"></i></a></div>
+    </div>
+  </section>
+  <script>
+    feather.replace()
+  </script>
+</body>
+
+</html>
